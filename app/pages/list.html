@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-4" ng-repeat="book in books track by $index">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3>{{book.name}}</h3>
+            </div>
+            <div class="panel-body">
+                <img class="book-img" ng-src="{{book.src}}" alt="">
+            </div>
+            <div class="panel-footer">
+                <span>书的价格:</span>
+                <span>{{book.price | currency:'￥'}}</span>
+                <a href="#!/detail/{{book._id}}" class="btn btn-success pull-right" style="margin-top: -7px">详情</a>
+            </div>
+        </div>
+    </div>
+</div>

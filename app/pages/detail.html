@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-9 col-md-offset-2">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <span>书名</span>
+                <span ng-hide="editing">{{_book.name}}</span>
+                <input type="text" ng-model="book.name" ng-show="editing">
+            </div>
+            <div class="panel-body">
+                <div class="col-md-4">
+                    <span>封面</span>
+                    <img ng-hide="editing" ng-src="{{_book.src}}" alt="" class="book-img">
+                    <input type="text" ng-show="editing" ng-model="book.src">
+                </div>
+                <div class="col-md-5">
+                    <p></p>
+                </div>
+            </div>
+            <div class="panel-footer">
+                <span>书的价格:</span>
+                <span ng-hide="editing">{{_book.price | currency:'￥'}}</span>
+                <input type="text" ng-model="book.price" ng-show="editing">
+                <button class="btn btn-info" ng-hide="editing" ng-click="edit()">编辑</button>
+                <button class="btn btn-danger" ng-click="removeBook()" ng-hide="editing">删除</button>
+                <button class="btn btn-success" ng-show="editing" ng-click="confirm()">确定</button>
+                <button class="btn btn-default" ng-click="cancel()" ng-show="editing">取消</button>
+            </div>
+        </div>
+    </div>
+</div>

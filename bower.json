@@ -1,0 +1,23 @@
+{
+  "name": "ng-book",
+  "description": "这是一个珠峰书店",
+  "main": "index.js",
+  "authors": [
+    "zhufengnodejs <zhufengnodejs@126.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "./public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.1",
+    "bootstrap": "^3.3.7",
+    "ng-tour": "ng-route#*"
+  }
+}
